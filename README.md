@@ -1,6 +1,12 @@
 # Tiny Bank Application
 
-This is a simple web application that simulates a tiny bank. The application allows for the creation and deactivation of users, depositing and withdrawing money from accounts, transferring money between accounts, viewing account balances, and viewing transaction history. The application is built using Spring Boot and uses in-memory storage.
+This is a simple web application that simulates a tiny bank. The application allows for the creation and deactivation of users, depositing and withdrawing money from accounts, transferring money between accounts, viewing account balances, and viewing transaction history. The application is built using Spring Boot and uses in-memory storage (H2).
+
+With this url:
+
+https://elements.getpostman.com/redirect?entityId=23793263-bd2745d5-d9f3-438b-85fe-9ff45ec30fd9&entityType=collection
+
+is possible to fork all the possible requests using Postman.
 
 ## Table of Contents
 
