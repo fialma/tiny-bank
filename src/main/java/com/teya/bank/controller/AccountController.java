@@ -26,9 +26,14 @@ public class AccountController {
         return accountService.findByUser(user);
     }
 
-    @GetMapping("/findById/{id}")
+    @GetMapping("/findById/{accountId}")
     public Account findById(@PathVariable Long accountId){
         return accountService.findById(accountId);
+    }
+
+    @GetMapping("/balance/{accountId}")
+    public BigDecimal balance(@PathVariable Long accountId){
+        return accountService.findById(accountId).getBalance();
     }
 
     @PutMapping("/create/{userId}")
@@ -67,6 +72,4 @@ public class AccountController {
 
         return accountService.transferTo(fromAccount, toAccount, amount);
     }
-
-
 }

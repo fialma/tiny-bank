@@ -26,6 +26,13 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 
     @ExceptionHandler
     @ResponseBody
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorMessage accountNotFoundExceptionHandler(AccountNotFoundException e){
+        return new ErrorMessage(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler
+    @ResponseBody
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public ErrorMessage userNotActiveExceptionHandler(UserNotActiveException e){
         return new ErrorMessage(HttpStatus.FORBIDDEN, e.getMessage());

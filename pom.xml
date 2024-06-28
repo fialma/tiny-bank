@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.teya</groupId>
 	<artifactId>tiny-bank</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>tiny-bank</name>
 	<description>Demo project for Teya implementing a Tiny Bank</description>
 	<url/>
