@@ -32,3 +32,20 @@ This is a simple web application that simulates a tiny bank. The application all
 
 4. **The application should now be running on http://localhost:8080**
 
+## Launching the App in Docker
+be sure Docker running on the system
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/fialma/tiny-bank.git
+   cd tiny-bank
+
+2. **Build the project:**
+   ```bash
+   ./mvnw clean package
+   
+3. **Build the docker image:**
+   ```bash
+   docker build -t tiny-bank . 
+4. **The application should now be running on http://localhost:8080**
+
