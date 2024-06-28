@@ -11,6 +11,20 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * In case on object is not found
+ * a Response with 404-NotFound is returned
+ *
+ * I assume that a User deactivated is not allow
+ * to do operations like withdraw, deposit, creating
+ * and receiving transfer, etc.
+ * In case an operation is attempted on a deactivated account
+ * a Response with 403-Forbidden is returned
+ *
+ * In case a withdraw or a transfer is attempted with
+ * not sufficient balance on it also 403-Forbidden is returned
+ *
+ */
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
