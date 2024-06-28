@@ -19,14 +19,14 @@ public class UserController {
         return userService.findAll();
     }
 
-    @GetMapping("/findById/{id}")
-    public User findById(@PathVariable Long id){
-        return userService.findById(id);
+    @GetMapping("/findById/{userId}")
+    public User findById(@PathVariable Long userId){
+        return userService.findById(userId);
     }
 
-    @GetMapping("/findUserWithDetailedAccounts/{id}")
-    public User findUserWithDetailedAccounts(@PathVariable Long id){
-        return userService.findUserWithDetailedAccounts(id);
+    @GetMapping("/findUserWithDetailedAccounts/{userId}")
+    public User findUserWithDetailedAccounts(@PathVariable Long userId){
+        return userService.findUserWithDetailedAccounts(userId);
     }
 
     @PutMapping("/create")
@@ -34,14 +34,14 @@ public class UserController {
         return userService.create();
     }
 
-    @PostMapping("/deactivate/{id}")
-    public User deactivate(@PathVariable Long id){
-        return userService.deactivate(id);
+    @PostMapping("/deactivate/{userId}")
+    public User deactivate(@PathVariable Long userId){
+        return userService.deactivate(userId);
     }
 
-    @PostMapping("/activate/{id}")
-    public User activate(@PathVariable Long id){
-        return userService.activate(id);
+    @PostMapping("/activate/{userId}")
+    public User activate(@PathVariable Long userId){
+        return userService.activate(userId);
     }
 
 
