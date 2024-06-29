@@ -36,11 +36,13 @@ public class AccountServiceImplTest {
         User user = new User();
         user.setId(1L);
         user.setActive(true);
-        Account account = new Account();
-        when(accountRepository.save(any(Account.class))).thenReturn(account);
-        Account createdAccount = accountService.create(user);
+        when(accountRepository.save(any(Account.class))).thenReturn(new Account());
 
-        assertEquals(user, createdAccount.getUser());
+        accountService.create(user);
+
+        verify(accountRepository).save(argThat(a ->
+                a.getUser().equals(user)
+        ));
     }
 
     @Test
