@@ -56,6 +56,12 @@ be sure Docker running on the system
    ```
 4. **The application should now be running on http://localhost:8080**
 
+## Execute Tests
+1. **Inside the main folder tiny-bank:**
+   ```bash
+   ./mvnw test
+   ```
+   
 ## API endpoints
 ### User Management
 1. **Create a new User**
