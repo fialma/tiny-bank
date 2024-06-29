@@ -29,7 +29,7 @@ public class UserController {
         return userService.findUserWithDetailedAccounts(userId);
     }
 
-    @PutMapping("/create")
+    @PostMapping("/create")
     public User create(){
         return userService.create();
     }

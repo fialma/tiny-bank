@@ -50,7 +50,7 @@ public class AccountController {
         return accountService.findById(accountId).getBalance();
     }
 
-    @PutMapping("/create/{userId}")
+    @PostMapping("/create/{userId}")
     public Account create(@PathVariable Long userId){
         User user = userService.findActiveUserById(userId);
         return accountService.create(user);

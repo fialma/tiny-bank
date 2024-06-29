@@ -66,7 +66,7 @@ be sure Docker running on the system
 ### User Management
 1. **Create a new User**
    ```http 
-   PUT /users/create
+   POST /users/create
    ```
 2. **Retrieve all the users created**
    ```http 
@@ -96,7 +96,7 @@ be sure Docker running on the system
 ### Account Management
 1. **Create a new Account for a UserId**
    ```http 
-   PUT /accounts/create/{userId}
+   POST /accounts/create/{userId}
    
    Path Parameters:
    userId (Long): ID of the user
