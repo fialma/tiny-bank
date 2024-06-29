@@ -52,7 +52,7 @@ public class AccountServiceImpl implements AccountService{
         return deposit(account, amount, false);
     }
 
-    public Account deposit(Account account, BigDecimal amount, boolean isTransfer) {
+    private Account deposit(Account account, BigDecimal amount, boolean isTransfer) {
         account.setBalance(account.getBalance().add(amount));
         Transaction transaction = new Transaction();
         transaction.setAccount(account);
@@ -70,7 +70,7 @@ public class AccountServiceImpl implements AccountService{
         return withdraw(account, amount, false);
     }
 
-    public Account withdraw(Account account, BigDecimal amount, boolean isTransfer) {
+    private Account withdraw(Account account, BigDecimal amount, boolean isTransfer) {
         BigDecimal updatedBalance = account.getBalance().subtract(amount);
 
         if(updatedBalance.compareTo(BigDecimal.ZERO) < 0)
